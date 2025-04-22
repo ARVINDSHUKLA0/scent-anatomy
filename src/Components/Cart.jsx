@@ -87,14 +87,14 @@ const Cart = () => {
                                 )))
                         }
                     </div>
-                    <div className='ps-4 pe-5 mt-2 pb-3 custom-height-set'>
+                    <div className='ps-lg-4 ps-2 pe-3 pe-lg-5 mt-2 pb-3 custom-height-set'>
                         <div className='d-flex justify-content-between align-items-center'>
                             <p className='fs-5 text-capitalize'>subtotal</p>
                             <p> &#x20B9; {total}</p>
                         </div>
                         <p className='fs-small text-capitalize'>Taxes and shipping calculated at checkout</p>
                         <Link to="/checkout" className='text-decoration-none text-white'>
-                            <button onClick={() => setShowCart(false)} className='text-capitalize btn-normal w-100 mb-3'>check out</button>
+                            <button onClick={() => setShowCart(false)} className='text-capitalize btn-normal w-100 mb-lg-3 mb-2'>check out</button>
                         </Link>
 
                         <Link to="/cartview" className='text-decoration-none text-white'>
