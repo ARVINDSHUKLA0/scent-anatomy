@@ -1,0 +1,123 @@
+.product-single-item-container{
+    height: 450px;
+}
+.product-buy-banner{
+   background-image: url('/assets/img/ProductbuyBanner.jpg');
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-position: top, center;
+   background-size: cover;
+
+}
+.imgesProductSlick{
+    height: 130px; 
+    width: 130px;
+}
+.cutom-width-img{
+    width: 100%;
+}
+.product-buy-imges-center{
+    height: auto;   
+    width: 100%; 
+    display: inline-block; 
+    align-items: center;
+    justify-items: center !important; 
+}
+.product-buy-imges-center img{
+    height: 100%; 
+    width: 100%;
+}
+ 
+.custom-product-slick-slider{
+    overflow: hidden; 
+    width: 100%;
+}
+.custom-product-slick-slider img{
+    border: 1px dotted gray;
+    border-radius: 21px;
+} 
+.custom-product-slick-slider .slick-track {
+    display: flex !important;
+    align-items: center !important; 
+  }
+ 
+  .custom-product-slick-slider .slick-slide {
+    padding: 0 !important;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  .custom-product-slick-slider .slick-list {
+    margin: 0;
+    overflow: visible;
+  }
+   
+  .custom-product-slick-slider .slick-prev,
+  .custom-product-slick-slider .slick-next {
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .custom-product-slick-slider .slick-prev {
+    left: 10px;
+  }
+  .custom-product-slick-slider .slick-next {
+    right: 10px;
+  }
+  
+  .custom-product-slick-slider .slick-prev:before,
+  .custom-product-slick-slider .slick-next:before {
+    color: #000;
+    font-size: 24px;
+  }
+
+  .expandable-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px !important;
+    border: 1px dashed gray;
+    border-radius: 30px;
+    background-color: white;  
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none; 
+  }
+   
+  .expandable-button.open {
+    padding: 20px; 
+    min-height: 100px;  
+  }
+   
+  .button-content {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 50%; 
+    transition: transform 0.3s ease;
+  }
+  
+  .key-font-size{
+    font-size: 17px;
+    font-weight: 700;
+  }
+  
+  @media (min-width: 0px) and (max-width: 524px) {
+    .imgesProductSlick{
+        height: 100px; 
+        width: 100px;
+    }
+   
+  }

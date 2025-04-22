@@ -1,0 +1,43 @@
+.slider-header-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-container {
+  height: 100%;
+}
+
+.header-slider {
+  height: 100vh;
+  width: 100%;
+}
+
+.baner-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+.slider-header-wrap .slick-prev,
+.slider-header-wrap .slick-next {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.slider-header-wrap .slick-prev {
+  left: 1px;
+}
+
+.slider-header-wrap .slick-next {
+  right: 10px;
+}
+
+.slider-header-wrap .slick-prev:before,
+.slider-header-wrap .slick-next:before {
+  color: #ffffff;
+  font-size: 30px;
+}

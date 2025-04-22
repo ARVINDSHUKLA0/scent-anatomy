@@ -1,0 +1,8 @@
+.background-imges-about-banner{
+    background-image: url("/assets/img/slider2.jpeg");
+    height: 430px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

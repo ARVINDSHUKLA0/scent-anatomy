@@ -1,0 +1,345 @@
+ .custom-font-size {
+     font-size: 12px;
+ }
+ 
+ .cutom-color{
+    color: black;
+ }
+
+ .custom-height-aside {
+     height: 100vh;
+     overflow: hidden;
+ }
+
+ .custom-font-weight {
+     font-weight: 600;
+ }
+
+ .custom-width {
+     width: 180px !important;
+ }
+
+ .navbar-main-display {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .item-warrper-remove {
+     position: fixed;
+     top: 0px;
+     left: 0px;
+     width: 100%;
+     height: 100vh;
+     background-color: rgba(0, 0, 0, 0.5);
+     cursor: pointer;
+     z-index: 9;
+ }
+ 
+ .drop-dwon {
+     position: absolute;
+     background-color: white;
+     top: 51px;
+     z-index: 99;
+     width: 100%;
+     height: auto;
+     left: 0px;
+     display: none;
+     padding: 30px !important;
+
+
+ }
+
+ .list-item:hover .drop-dwon {
+
+     display: block;
+
+ }
+
+ .img-set-width {
+     height: 290px;
+     width: 300px;
+ }
+
+ .listIcon {
+     transform: rotate(0deg);
+     transition: transform 0.3s ease;
+ }
+
+ .listIconrotated {
+     transform: rotate(180deg);
+
+ }
+
+ .sidebar-open-wrap {
+     transition: 0.3s;
+     right: -50%;
+     z-index: 76;
+     position: fixed;
+     width: 40%;
+     z-index: 99;
+
+ }
+
+ .sidebar-open-wrap.open {
+     right: 0%;
+     z-index: 77;
+     color: white;
+ }
+
+ .aside-bg-color {
+     background-color: #212529;
+ }
+
+ @media (min-width : 1024px) {
+     .listIcon {
+         display: none;
+     }
+ }
+
+
+
+ .list-display-menu {
+     display: flex;
+ }
+
+ .icon-menu-list {
+     display: flex;
+ }
+
+ /* .bars-icon-display {
+     display: none;
+ } */
+
+ .dropdwon-profile-navabar {
+     position: absolute;
+     top: 102%;  
+     right: 0%;
+     display: none; 
+     z-index: 99;
+ }
+ .custom-dropdwon-profile{
+    padding:  15px !important;
+    margin-top: 15px;
+    border: 0px; 
+    box-shadow: 10px 20px 30px 10px rgba(128, 128, 128, 0.305);
+    border-radius: 2px;
+
+ }
+
+ .cutom-color{
+    color:black;
+ }
+  
+
+ .profile-hover-navbar:hover .dropdwon-profile-navabar {
+     display: block;
+ }
+
+ @media (min-width: 0px) and (max-width: 525px) {
+
+     .custom-font-size {
+         font-size: 11px;
+     }
+
+     .sm-postion {
+         position: fixed;
+         top: 0px; 
+         z-index: 98;
+         width: 80%;
+         height: 100vh;
+         left: -100%;
+         background-color: #212529;
+         color: white;
+         padding: 10px 20px !important;
+         transition: .2s;
+     }
+
+     .sm-postion.menuOpen {
+         left: 0;
+
+     }
+
+     .drop-dwon {
+         position: relative;
+         background-color: #212529;
+         top: 0;
+         z-index: 99;
+         width: 100%;
+         height: 0;
+         left: 0;
+         display: block;
+         overflow: hidden;
+         padding: 0 !important;
+         transition: height 0.3s ease;
+     }
+
+     .drop-dwon.dropToggleMenu {
+         height: 35vh;
+         padding: 10px 0 !important;
+         background-color: #212529;
+         overflow: scroll;
+         scrollbar-width: none;
+     }
+
+     .img-set-width {
+         display: none;
+     }
+
+     .list-display-menu {
+         display: block;
+     }
+
+     .icon-menu-list {
+         display: none;
+     }
+
+     .bars-icon-display {
+         display: block;
+     }
+     .cutom-color{
+        color: white;
+     }
+     .item-sm-py{
+        padding: 15px 0px !important;
+     }
+
+ }
+
+ @media (min-width: 526px) and (max-width: 768px) {
+     .custom-font-size {
+         font-size: 12px;
+     }
+
+     .sm-postion {
+         position: absolute;
+         top: 62px;
+         z-index: 98;
+         width: 100%;
+         height: 100vh;
+         left: -100%;
+         background-color: #212529;
+         color: white;
+         padding: 10px 20px;
+         transition: .2s;
+     }
+
+     .sm-postion.menuOpen {
+         left: 0;
+
+     }
+
+     .drop-dwon {
+         position: sticky;
+         background-color: #212529;
+         top: 0px;
+         z-index: 99;
+         width: 100%;
+         height: 0vh;
+         left: 0px;
+         display: block;
+         overflow: hidden;
+         padding: 0px 30px;
+         transition: .3s;
+     }
+
+     .drop-dwon.dropToggleMenu {
+         height: 20vh;
+         overflow: scroll;
+         padding: 10px 30px;
+
+     }
+
+     .list-display-menu {
+         display: block;
+     }
+
+     .img-set-width {
+         display: none;
+     }
+
+     .icon-menu-list {
+         display: none;
+     }
+
+     .bars-icon-display {
+         display: block;
+     }
+
+     .custom-width {
+         width: 230px !important;
+     }
+
+     .icon-size {
+         font-size: 20px;
+     }
+ }
+
+ @media (min-width: 769px) and (max-width:1024px) {
+     .custom-font-size {
+         font-size: 15px;
+     }
+
+     .sm-postion {
+         position: absolute;
+         top: 75px;
+         z-index: 98;
+         width: 100%;
+         height: 100vh;
+         left: -100%;
+         background-color: #212529;
+         color: white;
+         padding: 10px 20px;
+         transition: .2s;
+     }
+
+     .sm-postion.menuOpen {
+         left: 0;
+
+     }
+
+     .drop-dwon {
+         position: sticky;
+         background-color: #212529;
+         top: 0px;
+         z-index: 99;
+         width: 100%;
+         height: 0vh;
+         left: 0px;
+         display: block;
+         overflow: hidden;
+         padding: 0px 30px;
+         transition: .3s;
+     }
+
+     .drop-dwon.dropToggleMenu {
+         height: 20vh;
+         overflow: scroll;
+         padding: 10px 30px;
+
+     }
+
+     .custom-width {
+         width: 270px !important;
+     }
+
+     .list-display-menu {
+         display: block;
+     }
+
+     .img-set-width {
+         display: none;
+     }
+
+     .icon-menu-list {
+         display: none;
+     }
+
+     /* .bars-icon-display {
+         display: block;
+     } */
+
+     .icon-size {
+         font-size: 23px;
+     }
+ }

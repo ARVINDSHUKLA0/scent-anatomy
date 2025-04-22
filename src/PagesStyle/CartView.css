@@ -1,0 +1,16 @@
+.custom-padding-checkout{
+    padding: 10px 30px !important;
+}
+.custom-width-set{
+   width: 20%;
+}
+@media (min-width: 0px) and (max-width: 520px) {
+    .custom-width-set{
+        width: 50%;
+     }
+}
+@media (min-width: 526px) and (max-width: 768px) {
+    .custom-width-set{
+        width: 25%;
+     }
+}

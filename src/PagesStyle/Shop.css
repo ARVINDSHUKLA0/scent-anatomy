@@ -1,0 +1,29 @@
+.postion-sticky-cetegry {
+    position: sticky;
+    top: 0;  
+    z-index: 10;   
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px; 
+    cursor: pointer;
+}
+
+ 
+.pagination .page-item {
+    font-size: 40px;  
+    padding: 10px 0px !important ;
+    width: 25px;
+    text-align: center;
+    outline: none !important;
+    
+}
+
+.pagination .active{ 
+    color: white; 
+}
+.pagination .page-link:focus{ 
+    box-shadow: none !important;
+   
+}

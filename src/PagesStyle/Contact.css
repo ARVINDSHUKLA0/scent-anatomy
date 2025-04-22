@@ -1,0 +1,21 @@
+.enquiry-text{
+    font-style: italic;
+}
+ 
+.custom-border-contact{
+    border: 1px solid rgba(128, 128, 128, 0.281);
+    border-radius: 21px;
+}
+ 
+.conatct-btn-icon{
+    height: 40px;
+    width: 40px;
+    background-color: #7A3803;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    color: white;
+}

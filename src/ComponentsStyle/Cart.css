@@ -1,0 +1,47 @@
+.CartContainer { 
+  display: none;
+  position: fixed;
+  justify-content: end;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000; 
+}
+
+.Wrapper-bg-Cart {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(0.77);
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.cart-wraper {
+  transition: .3s;
+  width: 400px;  
+  height: 100vh; 
+  background-color: white; 
+  position: absolute;
+  left: 400px; 
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+  
+}  
+
+.custom-remove-set{
+  width: 25px;
+}
+
+.sideCartProductWrap{ 
+  overflow: auto;
+}
+.aside-cart-height{
+  height: 270px; 
+  scrollbar-width: none;
+  overflow: scroll;
+  box-shadow: 10px 30px 30px 30px rgba(128, 128, 128, 0.216);
+}

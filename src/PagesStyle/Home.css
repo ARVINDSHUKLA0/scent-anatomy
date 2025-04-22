@@ -1,0 +1,170 @@
+.filter-dropdown {
+    position: absolute;
+    background-color: #212529;
+    width: 200px;
+    overflow: hidden;
+    z-index: 86;
+    left: -130px;
+    top: 35px;
+    color: white;
+    transition: height 0.3s ease;
+    text-align: center;
+    height: 0px;
+
+}
+.custom-padding-icon-heart{
+    padding: 7px !important;
+}
+
+.filter-dropdown.open {
+    height: 250px;
+}
+
+.main-font-weight {
+    font-weight: 900;
+}
+
+.text-color-cetegory {
+    color: black;
+}
+
+.product-btn-price {
+    height: 40px;
+}
+
+.product-add-cart {
+    left: 100%;
+    transition: .3s;
+}
+
+.product-price {
+    left: 0%;
+    transition: .3s;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-wrapper {
+    bottom: -40px;
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    transition: .3s;
+}
+
+.product-item:hover .product-add-cart {
+    left: 0%;
+}
+
+.product-item:hover .product-price {
+    left: -100%;
+}
+
+.product-item:hover .product-wrapper {
+    bottom: 0px;
+}
+
+.custom-bg {
+    background-color: #F8F9FA;
+}
+
+.newslatter-communty-font {
+    font-size: 16px;
+    color: gray;
+    letter-spacing: 1px;
+    font-weight: 500;
+
+}
+
+.newslatter-custom-style {
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.newslatetr-sumbit-btn {
+    background-color: #8F0403;
+}
+
+.newsletter-input:active,
+.newsletter-input:focus,
+.newsletter-input:focus-visible {
+    box-shadow: none !important;
+    outline: none;
+}
+
+@media (min-width: 0px) and (max-width: 524px) {
+    .categoryWrap {
+        position: absolute;
+        height: 0px;
+        width: 160px;
+        top: 89%;
+        left: 0px;
+        background-color: #212529;
+        transition: .3s;
+        overflow: hidden;
+        z-index: 87;
+        text-align: center;
+        color: white;
+    }
+
+
+
+    .categoryWrap.open {
+        height: 250px;
+    }
+
+    .text-color-cetegory {
+        color: white;
+    }
+
+}
+
+@media (min-width: 525px) and (max-width: 768px) {
+    .categoryWrap {
+        position: absolute;
+        height: 0px;
+        width: 200px;
+        top: 100%;
+        left: 0px;
+        background-color: #212529;
+        transition: .3s;
+        overflow: hidden;
+        z-index: 87;
+        text-align: center;
+        color: white;
+    }
+
+    .categoryWrap.open {
+        height: 250px;
+    }
+
+    .text-color-cetegory {
+        color: white;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 990px) {
+    .categoryWrap {
+        position: absolute;
+        height: 0px;
+        width: 200px;
+        top: 100%;
+        left: 0px;
+        background-color: #212529;
+        transition: .3s;
+        overflow: hidden;
+        z-index: 87;
+        text-align: center;
+        color: white;
+    }
+
+    .categoryWrap.open {
+        height: 250px;
+    }
+
+    .text-color-cetegory {
+        color: white;
+    }
+}

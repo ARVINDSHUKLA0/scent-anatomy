@@ -1,0 +1,22 @@
+.custom-btn-checkout{
+    background-color: #7A3803;
+    color: white;
+    border: none;
+    padding: 7px 30px !important;
+    border-radius: 30px;
+}
+.custom-width{
+    width: 130px;
+}
+
+@media (min-width: 0px) and (max-width: 525px) {
+
+
+}
+
+@media (min-width: 526px) and (max-width: 768px) {
+
+}
+@media (min-width: 769) and (max-width: 1024px) {
+
+}

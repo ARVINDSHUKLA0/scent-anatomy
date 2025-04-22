@@ -1,0 +1,30 @@
+.forget-section {
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .forget-container {
+    width: 45%; 
+    padding: 20px !important;
+    border-radius: 8px;
+    box-shadow: 0px 10px 90px 0px rgba(128, 128, 128, 0.873);
+  }
+ 
+  
+  @media (min-width: 0px) and (max-width: 920px) {
+    .forget-section {
+        height: 100vh;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .forget-container {
+        width: 100%; 
+        padding: 20px !important;
+        border-radius: 8px;
+        box-shadow: 0px 10px 90px 0px rgba(128, 128, 128, 0.873);
+      }
+      
+  }
