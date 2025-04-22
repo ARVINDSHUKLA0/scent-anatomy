@@ -46,3 +46,8 @@
   overflow: scroll; 
   box-shadow: 10px 30px 30px 30px rgba(128, 128, 128, 0.216);
 }
+ 
+.custom-height-set{
+  background-color: red;
+  height: 40%;
+}
