@@ -8,11 +8,11 @@
     height: 60%;
  }
  .wishlist-conatiner{
-    height: 56vh;
+    height: 52vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: scroll;
+    overflow: hidden;
  }
 .custom-font-degin{
     font-style: italic;
