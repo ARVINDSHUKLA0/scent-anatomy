@@ -1,19 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../PagesStyle/Shop.css';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import Product from '../Api/Product';
 import { Link } from 'react-router-dom';
 import { Pagination } from 'react-bootstrap';
+import { AddtoCartWarpper } from '../Context/AddToCartContext';
+import { WisListdata } from '../Context/WislistContext';
 
 
 
 const Shop = () => {
+    const { addToCartFunc } = useContext(AddtoCartWarpper)
+    const { WislistFunc } = useContext(WisListdata)
     const [gender, setGender] = useState('');
     const [sortBy, setSortBy] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 16;
+    
 
     useEffect(() => {
         const sorted = Product
@@ -36,11 +41,9 @@ const Shop = () => {
 
         setFilteredProducts(sorted);
     }, [gender, sortBy]);
-
-    // Calculate total pages
+ 
     const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-
-    // Get products for the current page
+ 
     const currentProducts = filteredProducts.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
@@ -189,7 +192,7 @@ const Shop = () => {
                                                     <p className="bg-dark text-white  mb-0  h-100 px-3 pt-1  text-uppercase fs-small">
                                                         Quick Look
                                                     </p>
-                                                    <Link>
+                                                    <Link onClick={() => WislistFunc(itemValue.id)}>
                                                         <i className="fa-regular fa-heart h-100 custom-padding-icon-heart  bg-secondary text-white fs-mediam-font-size "></i>
                                                     </Link>
                                                 </span>
@@ -201,8 +204,8 @@ const Shop = () => {
                                                 {itemValue.title}
                                             </p>
                                             <div className="product-btn-price w-100 position-relative overflow-x-hidden">
-                                                <div className="position-absolute top-0 w-100 text-center product-add-cart">
-                                                    <button className="border-0 text-uppercase btn-content bg-white custom-font-size-and-weight">
+                                                <div  className="position-absolute top-0 w-100 text-center product-add-cart" >
+                                                    <button onClick={() => addToCartFunc(itemValue.id)} className="border-0 text-uppercase btn-content bg-white custom-font-size-and-weight">
                                                         add to cart
                                                     </button>
                                                 </div>

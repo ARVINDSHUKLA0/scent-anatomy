@@ -205,7 +205,7 @@ const Navbar = () => {
                             </li> */}
 
                             <li className='list-icon-none'>
-                                <Link className='custom-font-size text-uppercase text-dark py-4 custom-font-weight text-decoration-none custom-padding-shop ' to="/shop">Shop</Link>
+                                <Link className='custom-font-size text-uppercase cutom-color py-4 custom-font-weight text-decoration-none custom-padding-shop ' to="/shop">Shop</Link>
                             </li>
 
                         </ul>
