@@ -87,7 +87,7 @@ const Cart = () => {
                                 )))
                         }
                     </div>
-                    <div className='ps-4 pe-5 mt-2'>
+                    <div className='ps-4 pe-5 mt-2 mb-3'>
                         <div className='d-flex justify-content-between align-items-center'>
                             <p className='fs-5 text-capitalize'>subtotal</p>
                             <p> &#x20B9; {total}</p>

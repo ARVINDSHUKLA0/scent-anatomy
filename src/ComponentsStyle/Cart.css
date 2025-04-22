@@ -22,7 +22,7 @@
 .cart-wraper {
   transition: .3s;
   width: 400px;  
-  height: 100vh; 
+  height: 100vh !important; 
   background-color: white; 
   position: absolute;
   left: 400px; 
@@ -40,8 +40,8 @@
   overflow: auto;
 }
 .aside-cart-height{
-  height: 270px; 
+  height: 60%; 
   scrollbar-width: none;
-  overflow: scroll;
+  overflow: scroll; 
   box-shadow: 10px 30px 30px 30px rgba(128, 128, 128, 0.216);
 }
