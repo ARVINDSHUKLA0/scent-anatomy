@@ -26,12 +26,12 @@
         width: 75%;
     }
     .custom-padding-sm{
-        padding-left: 50px !important;
+        padding-left: 40px !important;
     }
 }
 @media (min-width: 526px) and (max-width: 768px) {
     .custom-width-btn{
-        width: 40%;
+        width: 50%;
     }
     .custom-padding-sm{
         padding-left: 40px !important;
