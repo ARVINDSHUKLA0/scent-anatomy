@@ -31,7 +31,7 @@
 }
 @media (min-width: 526px) and (max-width: 768px) {
     .custom-width-btn{
-        width: 50%;
+        width: 40%;
     }
     .custom-padding-sm{
         padding-left: 40px !important;
