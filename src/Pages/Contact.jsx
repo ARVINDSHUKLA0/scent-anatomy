@@ -82,7 +82,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-              <div className='custom-border-contact  my-4 p-lg-5 px-2 py-3 p-sm-4 ms-3'>
+              <div className='custom-border-contact  my-4 p-lg-5 px-2 py-3 p-sm-4 ms-lg-3'>
                 <div className='conatct-btn-icon mb-3'>
                   <i className="fa-solid fa-envelope"></i>
                 </div>
@@ -92,7 +92,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-              <div className='custom-border-contact  my-4 p-lg-5 px-2 py-3 p-sm-4 ms-3'>
+              <div className='custom-border-contact  my-4 p-lg-5 px-2 py-3 p-sm-4 ms-lg-3'>
                 <div className='conatct-btn-icon mb-3'>
                   <i className="fa-solid fa-location-dot"></i>
                 </div>

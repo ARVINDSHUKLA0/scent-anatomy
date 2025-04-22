@@ -30,8 +30,8 @@ const WishList = () => {
                   <div className='wishlist-min-height'>
                     <div className='position-relative px-2 py-2'>
                       <img className='img-fluid' src={wishListdata.thumbnailImage} alt="" />
-                      <h6 className='m-0 text-wrap py-2'>{wishListdata.title}</h6>
-                      <p className='fs-small'> &#x20B9; {wishListdata.price}</p>
+                      <h6 className='m-0 text-wrap py-2 custom-padding-sm'>{wishListdata.title}</h6>
+                      <p className='fs-small custom-padding-sm'> &#x20B9; {wishListdata.price}</p>
                       <div className='wishlist-remove-postion'>
                         <Link onClick={() => RemoveWishListfunc(wishListdata.id)}><i className="fa-solid fa-xmark text-dark fs-5 text-muted"></i></Link>
                       </div>

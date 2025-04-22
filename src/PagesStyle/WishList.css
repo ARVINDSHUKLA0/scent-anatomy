@@ -19,19 +19,22 @@
     font-style: italic;
 }
  
-/* 
-.custom-width-btn{
-    width: 40px;
-} */
+ 
 
 @media (min-width: 0px) and (max-width: 525px) {
     .custom-width-btn{
         width: 75%;
     }
+    .custom-padding-sm{
+        padding-left: 50px;
+    }
 }
 @media (min-width: 526px) and (max-width: 768px) {
     .custom-width-btn{
         width: 50%;
+    }
+    .custom-padding-sm{
+        padding-left: 40px;
     }
 }
 @media (min-width: 769px) and (max-width: 1440px) {
