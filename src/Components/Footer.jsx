@@ -8,20 +8,22 @@ const Footer = () => {
                 <div className='container py-4 '>
                     <div>
                         <ul className='d-flex align-items-center justify-content-center flex-wrap text-uppercase fs-12 fw-bolder cursor-pointer'>
-                            <li className='p-2 list-icon-none custom-font-size-and-weight'>© Roja Parfums Holdings Ltd 2024</li>
-                            <li className='p-2 list-icon-none custom-font-size-and-weight'>Shipping & Delivery</li>
+                            <li className='p-2 list-icon-none custom-font-size-and-weight'>all</li>
+                            <li className='p-2 list-icon-none custom-font-size-and-weight'>Bhakti Plush</li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'>
-                                <Link className='text-decoration-none text-dark' to="/cancellations"> Cancellations & Returns </Link>
+                                <Link className='text-decoration-none text-dark' to="/cancellations">Divine Oils</Link>
                             </li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'>
-                                <Link className='text-decoration-none text-dark' to="/privacyPolicy"> Privacy Policy   </Link>
+                                <Link className='text-decoration-none text-dark' to="/privacyPolicy">Gifting Collection</Link>
                             </li>
-                            <li className='p-2 list-icon-none custom-font-size-and-weight'>Cookie Policy</li>
+                            <li className='p-2 list-icon-none custom-font-size-and-weight'> Sacred Powders</li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'>
-                                <Link className='text-decoration-none text-dark' to="/termconditions"> Terms & Conditions </Link>
+                                <Link className='text-decoration-none text-dark' to="/termconditions">
+                                Sacred Scents
+                                </Link>
                             </li> 
-                            <li className='p-2 list-icon-none custom-font-size-and-weight'>Retail Locations</li>
-                            <li className='p-2 list-icon-none custom-font-size-and-weight'>Create an Account</li>
+                            <li className='p-2 list-icon-none custom-font-size-and-weight'>Sringar Box</li>
+                            <li className='p-2 list-icon-none custom-font-size-and-weight'>Temple Aromatics</li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'>
                                 <Link className='text-decoration-none text-dark text-uppercase' to="/about">
                                    about us

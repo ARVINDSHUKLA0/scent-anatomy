@@ -16,7 +16,7 @@
  }
 
  .custom-width {
-     width: 180px !important;
+     width: 60px !important;
  }
 
  .navbar-main-display {
@@ -39,7 +39,7 @@
  .drop-dwon {
      position: absolute;
      background-color: white;
-     top: 51px;
+     top: 69px;
      z-index: 99;
      width: 100%;
      height: auto;
@@ -106,11 +106,7 @@
  .icon-menu-list {
      display: flex;
  }
-
- /* .bars-icon-display {
-     display: none;
- } */
-
+ 
  .dropdwon-profile-navabar {
      position: absolute;
      top: 102%;  
@@ -267,7 +263,7 @@
      }
 
      .custom-width {
-         width: 230px !important;
+         width: 70px !important;
      }
 
      .icon-size {
@@ -320,7 +316,7 @@
      }
 
      .custom-width {
-         width: 270px !important;
+         width: 70px !important;
      }
 
      .list-display-menu {

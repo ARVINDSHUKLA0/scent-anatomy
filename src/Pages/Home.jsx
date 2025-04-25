@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import '../PagesStyle/Home.css'
 import Navbar from '../Components/Navbar'
 import HeaderSlider from '../Components/HeaderSlider'
 import Product from '../Api/Product'
-import timelessImage from '/assets/img/timeless.jpg'
+import timelessImage from '/assets/img/timeless.webp'
 import Footer from '../Components/Footer'
 import { Link } from 'react-router-dom'
 import { AddtoCartWarpper } from '../Context/AddToCartContext'
@@ -14,6 +14,10 @@ const Home = () => {
   const { WislistFunc } = useContext(WisListdata)
   const [categoryProduct, setCategoryProduct] = useState(false);
   const [filterPrice, setFilterPrice] = useState(false);
+  const [filter, setFilter] = useState('')
+  const [datafilter, setDatafilter] = useState([])
+
+
 
   const categoryShow = () => {
     setCategoryProduct(!categoryProduct);
@@ -23,6 +27,16 @@ const Home = () => {
     setFilterPrice(!filterPrice);
   }
 
+
+  useEffect(() => {
+    if (filter === '') {
+      setDatafilter([]);
+    } else {
+      const dataValue = Product.filter(item => item.category == filter);
+      setDatafilter(dataValue);
+    }
+  }, [filter])
+  const productsToShow = filter === '' ? Product : datafilter;
 
 
   return (
@@ -46,15 +60,33 @@ const Home = () => {
                 className={`categoryWrap mt-3 ${categoryProduct ? "open" : ""}`}
 
               >
-                <ul className="d-lg-flex py-4 d-block gap-4 p-0">
-                  <li className="text-uppercase d-lg-block d-none main-font-weight list-icon-none fs-mediam-font-size">
+                <ul className="d-lg-flex py-4 d-block gap-3 p-0">
+                  <li value=''   onClick={() => setFilter('')} className="text-uppercase d-lg-block cursor-pointer d-none main-font-weight list-icon-none fs-mediam-font-size">
                     all
                   </li>
-                  <li className="text-uppercase text-color-cetegory list-icon-none fs-mediam-font-size">
-                    men
+                  <li  onClick={() => setFilter('Bhakti')} className="text-uppercase d-lg-block d-none cursor-pointer  list-icon-none fs-mediam-font-size">
+                    Bhakti Plush
                   </li>
-                  <li className="text-uppercase text-color-cetegory list-icon-none fs-mediam-font-size">
-                    women
+                  <li  onClick={() => setFilter('Divine')} className="text-uppercase text-color-cetegory cursor-pointer list-icon-none fs-mediam-font-size">
+                    Divine Oils
+                  </li>
+                  <li  onClick={() => setFilter('Gifting')} className="text-uppercase text-color-cetegory cursor-pointer list-icon-none fs-mediam-font-size">
+                    Gifting Collection
+                  </li>
+                  <li  onClick={() => setFilter('Ritual')} className="text-uppercase text-color-cetegory cursor-pointer list-icon-none fs-mediam-font-size">
+                    Ritual Essentials
+                  </li>
+                  <li  onClick={() => setFilter('Sacred')} className="text-uppercase text-color-cetegory cursor-pointer list-icon-none fs-mediam-font-size">
+                    Sacred Powders
+                  </li>
+                  <li  onClick={() => setFilter('SacredScents')} className="text-uppercase text-color-cetegory cursor-pointer list-icon-none fs-mediam-font-size">
+                    Sacred Scents
+                  </li>
+                  <li  onClick={() => setFilter('SringarBox')} className="text-uppercase text-color-cetegory cursor-pointer list-icon-none fs-mediam-font-size">
+                    Sringar Box
+                  </li>
+                  <li onClick={() => setFilter('TempleDecor')} className="text-uppercase text-color-cetegory cursor-pointer list-icon-none fs-mediam-font-size">
+                    Temple Aromatics
                   </li>
                 </ul>
               </div>
@@ -83,12 +115,14 @@ const Home = () => {
           <div className='px-2'>
             <div className="row">
               {
-                Product.map((itemValue, index) => (
+                productsToShow.map((itemValue, index) => (
                   <div className='col-lg-3 col-md-4 col-sm-6 col-6 product-item text-center cursor-pointer ' key={index}>
 
                     <div className="position-relative overflow-hidden ">
-                      <Link to={`/productbuy/${itemValue.id}`} className='text-decoration-none'>
-                        <img className='img-fluid' src={itemValue.thumbnailImage} width={235} alt="Image" />
+                      <Link to={`/productbuy/${itemValue.id}`} className='text-decoration-none '>
+                      <div className='custom-height-product'>
+                        <img className='img-fluid' src={itemValue.thumbnailImage} width={260} alt="Image" />
+                        </div>
                       </Link>
                       <div
                         className="position-absolute product-wrapper d-flex align-items-center justify-content-center ">
@@ -102,7 +136,7 @@ const Home = () => {
                     </div>
 
                     <div className="">
-                      <p className="mb-2 text-uppercase text-dark mt-3 custom-font-size-and-weight px-2 fw-bold">basket with handles Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                      <p className="mb-2 text-uppercase text-dark mt-3 custom-font-size-and-weight px-2 fw-bold">{itemValue.title}</p>
                       <div className="product-btn-price w-100 position-relative overflow-x-hidden ">
                         <div className="position-absolute top-0 w-100 text-center product-add-cart"><button onClick={() => addToCartFunc(itemValue.id)}
                           className=" border-0 text-uppercase btn-content bg-white custom-font-size-and-weight">add to cart</button></div>

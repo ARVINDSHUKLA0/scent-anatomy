@@ -13,16 +13,16 @@ import { WisListdata } from '../Context/WislistContext';
 const Shop = () => {
     const { addToCartFunc } = useContext(AddtoCartWarpper)
     const { WislistFunc } = useContext(WisListdata)
-    const [gender, setGender] = useState('');
+    const [category, setCategory] = useState('');
     const [sortBy, setSortBy] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 16;
-    
+
 
     useEffect(() => {
         const sorted = Product
-            .filter(item => (gender ? item.gender === gender : true))
+            .filter(item => (category ? item.category === category : true))
             .sort((a, b) => {
                 if (sortBy === 'lowToHigh') {
                     return a.price - b.price;
@@ -40,10 +40,10 @@ const Shop = () => {
             });
 
         setFilteredProducts(sorted);
-    }, [gender, sortBy]);
- 
+    }, [category, sortBy]);
+
     const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
- 
+
     const currentProducts = filteredProducts.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
@@ -67,39 +67,112 @@ const Shop = () => {
                                     <div className="d-flex align-items-center mb-1">
                                         <input
                                             type="radio"
-                                            name="gender"
-                                            id="allGender"
+                                            name="category"
+                                            id="allcategory"
                                             value=""
-                                            onChange={(e) => setGender(e.target.value)}
+                                            onChange={(e) => setCategory(e.target.value)}
                                         />
-                                        <label htmlFor="allGender" className="ps-2 fs-6">
+                                        <label htmlFor="allcategory" className="ps-2 fs-6">
                                             All
                                         </label>
                                     </div>
 
-                                    <div className="d-flex align-items-center mb-1">
-                                        <input
-                                            type="radio"
-                                            name="gender"
-                                            id="male"
-                                            value="male"
-                                            onChange={(e) => setGender(e.target.value)}
-                                        />
-                                        <label htmlFor="male" className="ps-2 fs-6">
-                                            Male
-                                        </label>
-                                    </div>
+                                   
 
                                     <div className="d-flex align-items-center mb-1">
                                         <input
                                             type="radio"
-                                            name="gender"
-                                            id="female"
-                                            value="female"
-                                            onChange={(e) => setGender(e.target.value)}
+                                            name="category"
+                                            id="Divine"
+                                            value="Divine"
+                                            onChange={(e) => setCategory(e.target.value)}
                                         />
-                                        <label htmlFor="female" className="ps-2 fs-6">
-                                            Female
+                                        <label htmlFor="Divine" className="ps-2 fs-6">
+                                            Divine Oils
+                                        </label>
+                                    </div>
+                                    <div className="d-flex align-items-center mb-1">
+                                        <input
+                                            type="radio"
+                                            name="category"
+                                            id="bhakti"
+                                            value="Bhakti"
+                                            onChange={(e) => setCategory(e.target.value)}
+                                        />
+                                        <label htmlFor="bhakti" className="ps-2 fs-6">
+                                            Bhakti Plush
+                                        </label>
+                                    </div>
+                                    <div className="d-flex align-items-center mb-1">
+                                        <input
+                                            type="radio"
+                                            name="category"
+                                            id="Gifting"
+                                            value="Gifting"
+                                            onChange={(e) => setCategory(e.target.value)}
+                                        />
+                                        <label htmlFor="Gifting" className="ps-2 fs-6">
+                                            Gifting Collection
+                                        </label>
+                                    </div>
+                                    <div className="d-flex align-items-center mb-1">
+                                        <input
+                                            type="radio"
+                                            name="category"
+                                            id="Ritual"
+                                            value="Ritual"
+                                            onChange={(e) => setCategory(e.target.value)}
+                                        />
+                                        <label htmlFor="Ritual" className="ps-2 fs-6">
+                                            Ritual Essentials
+                                        </label>
+                                    </div>
+                                    <div className="d-flex align-items-center mb-1">
+                                        <input
+                                            type="radio"
+                                            name="category"
+                                            id="Sacred"
+                                            value="Sacred"
+                                            onChange={(e) => setCategory(e.target.value)}
+                                        />
+                                        <label htmlFor="Sacred" className="ps-2 fs-6">
+                                            Sacred Powders
+                                        </label>
+                                    </div>
+                                    <div className="d-flex align-items-center mb-1">
+                                        <input
+                                            type="radio"
+                                            name="category"
+                                            id="SacredScents"
+                                            value="SacredScents"
+                                            onChange={(e) => setCategory(e.target.value)}
+                                        />
+                                        <label htmlFor="SacredScents" className="ps-2 fs-6">
+                                            Sacred Scents
+                                        </label>
+                                    </div>
+                                    <div className="d-flex align-items-center mb-1">
+                                        <input
+                                            type="radio"
+                                            name="category"
+                                            id="SringarBox"
+                                            value="SringarBox"
+                                            onChange={(e) => setCategory(e.target.value)}
+                                        />
+                                        <label htmlFor="SringarBox" className="ps-2 fs-6">
+                                            Sringar Box
+                                        </label>
+                                    </div>
+                                    <div className="d-flex align-items-center mb-1">
+                                        <input
+                                            type="radio"
+                                            name="category"
+                                            id="TempleDecor"
+                                            value="TempleDecor"
+                                            onChange={(e) => setCategory(e.target.value)}
+                                        />
+                                        <label htmlFor="TempleDecor" className="ps-2 fs-6">
+                                        Temple Aromatics
                                         </label>
                                     </div>
                                 </div>
@@ -178,7 +251,7 @@ const Shop = () => {
                                         className="col-lg-3 col-md-4 col-sm-6 col-6 product-item text-center cursor-pointer"
                                         key={index}
                                     >
-                                        <div className="position-relative overflow-hidden">
+                                        <div className="position-relative overflow-hidden px-2">
                                             <Link to={`/productbuy/${itemValue.id}`} className="text-decoration-none">
                                                 <img
                                                     className="img-fluid"
@@ -204,7 +277,7 @@ const Shop = () => {
                                                 {itemValue.title}
                                             </p>
                                             <div className="product-btn-price w-100 position-relative overflow-x-hidden">
-                                                <div  className="position-absolute top-0 w-100 text-center product-add-cart" >
+                                                <div className="position-absolute top-0 w-100 text-center product-add-cart" >
                                                     <button onClick={() => addToCartFunc(itemValue.id)} className="border-0 text-uppercase btn-content bg-white custom-font-size-and-weight">
                                                         add to cart
                                                     </button>

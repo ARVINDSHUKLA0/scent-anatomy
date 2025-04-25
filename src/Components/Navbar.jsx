@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import '../ComponentsStyle/Navbar.css'
-import NavbarImage from '/assets/img/NavbarImage.jpg'
-import logoImage from '/assets/img/logo.png'
-import AsidebarNavImage from '/assets/img/asidenavbar.jpg'
+import '../ComponentsStyle/Navbar.css' 
+import logoImage from '/assets/img/logo.png' 
 import { Link, useNavigate } from 'react-router-dom'
 import { CartSildeContext } from '../Context/CartCompContext'
 import Cart from './Cart'
@@ -17,7 +15,6 @@ const Navbar = () => {
     const [dropToggleMenu, setDropToggleMenu] = useState(false);
     const [listIcon, setListIcon] = useState(false);
     const [dropName, setDropName] = useState(false)
-    const [asideBar, setsideBar] = useState(false);
 
     const navigate = useNavigate()
     const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -36,9 +33,6 @@ const Navbar = () => {
         setsideBar(true);
     };
 
-    const Sidebarremove = () => {
-        setsideBar(false);
-    }
 
     const toggleMenu = () => {
         setMenuActive(!menuActive);
@@ -89,32 +83,18 @@ const Navbar = () => {
                         </p>
                         <ul className={`list-display-menu gap-3 m-0 ${menuActive ? 'active' : ''}`}>
 
-                            <li onClick={() => toggleDropdownMenu("candles")} className='list-item cursor-pointer list-icon-none pt-1 item-sm-py  custom-font-size text-uppercase custom-font-weight'>
-                                <Link className='cutom-color text-decoration-none py-4'>candles</Link>
-                                <i className={`fa-solid fa-chevron-down mx-3 icon-list listIcon ${dropName === 'candles' && listIcon ? 'listIconrotated' : ''}`}></i>
-                                <div className={`drop-dwon ${(dropName === 'candles') ? 'dropToggleMenu' : ''}`}>
-                                    <ul className='d-sm-flex d-block justify-content-between box '>
-                                        <li className='list-icon-none'>
-                                            <ul className='custom-font-size text-uppercase'>
-                                                <li className='py-1 list-icon-none' >view all home</li>
-                                                <li className='py-1 list-icon-none' >the english garden collection  </li>
-                                                <li className='py-1 list-icon-none' >the city collection</li>
-                                                <li className='py-1 list-icon-none' >the aoud collection</li>
-                                                <li className='py-1 list-icon-none' >candles</li>
-                                                <li className='py-1 list-icon-none' >reed diffusers</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <img className='img-set-width' src={NavbarImage} alt="image" />
-                                        </li>
-                                    </ul>
-                                </div>
+                            <li className='list-icon-none'>
+                                <Link className='custom-font-size text-uppercase cutom-color py-4 custom-font-weight text-decoration-none custom-padding-shop ' to="/">home</Link>
                             </li>
 
-                            <li onClick={() => toggleDropdownMenu("fragrances")} className='list-item pt-1 cursor-pointer list-icon-none item-sm-py  custom-font-size text-uppercase custom-font-weight '>
-                                <Link className='text-decoration-none cutom-color py-4'>fragrances</Link>
-                                <i className={`fa-solid fa-chevron-down mx-3 icon-list listIcon ${dropName === 'fragrances' && listIcon ? 'listIconrotated' : ''}`}></i>
-                                <div className={`drop-dwon ${(dropName === 'fragrances') ? 'dropToggleMenu' : ''}`}>
+                            <li className='list-icon-none'>
+                                <Link className='custom-font-size text-uppercase cutom-color py-4 custom-font-weight text-decoration-none custom-padding-shop ' to="/">about</Link>
+                            </li>
+
+                            <li onClick={() => toggleDropdownMenu("shop")} className='list-item pt-1 cursor-pointer list-icon-none item-sm-py  custom-font-size text-uppercase custom-font-weight '>
+                                <Link to="/shop" className='text-decoration-none cutom-color py-4'>shop</Link>
+                                <i className={`fa-solid fa-chevron-down mx-3 icon-list listIcon ${dropName === 'shop' && listIcon ? 'listIconrotated' : ''}`}></i>
+                                <div className={`drop-dwon ${(dropName === 'shop') ? 'dropToggleMenu' : ''}`}>
 
                                     <ul className=' d-lg-flex d-block justify-content-between'>
                                         <li className='custom-font-size text-uppercase custom-font-weight list-icon-none' >shop types
@@ -160,54 +140,11 @@ const Navbar = () => {
                                     </ul>
                                 </div>
                             </li>
-
-                            <li onClick={() => toggleDropdownMenu("gifting")} className='list-item pt-1 cursor-pointer  list-icon-none  item-sm-py  custom-font-size text-uppercase custom-font-weight'>
-                                <Link className=' cutom-color text-decoration-none py-4'>gifting</Link>
-                                <i className={`fa-solid fa-chevron-down mx-3 icon-list listIcon ${dropName === 'gifting' && listIcon ? 'listIconrotated' : ''}`}></i>
-                                <div className={`drop-dwon ${(dropName === 'gifting') ? 'dropToggleMenu' : ''}`}>
-                                    <div className='d-sm-flex d-block justify-content-between box'>
-                                        <div>
-                                            <ul className='custom-font-size text-uppercase'>
-                                                <li className='py-1 list-icon-none' > gift set builder</li>
-                                                <li className='py-1 list-icon-none' > gift sets  </li>
-                                                <li className='py-1 list-icon-none' > gifts for her </li>
-                                                <li className='py-1 list-icon-none' >gifts for him</li>
-                                                <li className='py-1 list-icon-none' >little luxuries</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <img className='img-set-width' src={NavbarImage} alt="image" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            {/* <li onClick={() => toggleDropdownMenu("featured")} className='list-item pt-1 cursor-pointer list-icon-none item-sm-py  custom-font-size text-uppercase custom-font-weight '>
-                                <Link className=' cutom-color text-decoration-none py-4'>featured</Link>
-                                <i className={`fa-solid fa-chevron-down mx-3 icon-list listIcon ${dropName === 'featured' && listIcon ? 'listIconrotated' : ''}`}></i>
-                                <div className={`drop-dwon ${(dropName === 'featured') ? 'dropToggleMenu' : ''}`}>
-                                    <ul className='d-sm-flex d-block justify-content-between box'>
-                                        <li className='list-icon-none'>
-                                            <ul className='custom-font-size text-uppercase'>
-                                                <li className='py-1 list-icon-none' > aoud extraordinaire</li>
-                                                <li className='py-1 list-icon-none' > our latest launches </li>
-                                                <li className='py-1 list-icon-none' > scents for summer </li>
-                                                <li className='py-1 list-icon-none' >best-sellers</li>
-                                                <li className='py-1 list-icon-none' > bundle builder</li>
-                                                <li className='py-1 list-icon-none' >gift sets</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <img className='img-set-width' src={NavbarImage} alt="image" />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li> */}
-
+                              
+                       
                             <li className='list-icon-none'>
-                                <Link className='custom-font-size text-uppercase cutom-color py-4 custom-font-weight text-decoration-none custom-padding-shop ' to="/shop">Shop</Link>
+                                <Link className='custom-font-size text-uppercase cutom-color py-4 custom-font-weight text-decoration-none custom-padding-shop ' to="/">gifting</Link>
                             </li>
-
                         </ul>
 
                     </div>
@@ -215,7 +152,7 @@ const Navbar = () => {
 
                     <div>
                         <Link to="/">
-                            <img className='img-fluid custom-width py-2' src={logoImage} alt="" />
+                            <img className='img-fluid custom-width py-2' src={logoImage}  alt="" />
                         </Link>
                     </div>
 
@@ -265,7 +202,7 @@ const Navbar = () => {
                             </li>
                             <li className='custom-font-size list-icon-none'><i className="fa-solid fa-magnifying-glass"></i></li>
                             <li className='list-icon-none cursor-pointer'>
-                                <Link className='text-dark py-4'><i onClick={Sidebaropen} className="fa-solid fa-bars"></i></Link>
+                                <Link className='text-dark py-4'><i className="fa-solid fa-bars"></i></Link>
                             </li>
 
                         </ul>
@@ -303,76 +240,7 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                {asideBar && <div onClick={Sidebarremove} className='item-warrper-remove'></div>}
 
-
-                <aside
-                    className={` custom-height-aside aside-bg-color text-white sidebar-open-wrap top-0 ${asideBar ? 'open' : ''}`} >
-                    <div className="row px-4 ">
-                        <div className="col-lg-12 text-end py-1">
-                            <span onClick={Sidebarremove} className="cursor-pointer">
-                                <i className="fa-solid fa-xmark fs-5 pt-3 "></i>
-                            </span>
-                        </div>
-
-                        <div className='text-center'>
-                            <p className='text-uppercase custom-font-size pb-2'>welcome</p>
-                            <h3>Advertising is the way great brands get to be great brands.</h3>
-                            <div className="row px-5  py-3 cursor-pointer">
-                                <div className="col-lg-3 py-1">
-                                    <div className='p-2'>
-                                        <img className='img-fluid' src={AsidebarNavImage} alt="asideImage" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 py-1">
-                                    <div className='p-2'>
-                                        <img className='img-fluid' src={AsidebarNavImage} alt="asideImage" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 py-1">
-                                    <div className='p-2'>
-                                        <img className='img-fluid' src={AsidebarNavImage} alt="asideImage" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 py-1">
-                                    <div className='p-2'>
-                                        <img className='img-fluid' src={AsidebarNavImage} alt="asideImage" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 py-1">
-                                    <div className='p-2'>
-                                        <img className='img-fluid' src={AsidebarNavImage} alt="asideImage" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 py-1">
-                                    <div className='p-2'>
-                                        <img className='img-fluid' src={AsidebarNavImage} alt="asideImage" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 py-1">
-                                    <div className='p-2'>
-                                        <img className='img-fluid' src={AsidebarNavImage} alt="asideImage" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 py-1">
-                                    <div className='p-2'>
-                                        <img className='img-fluid' src={AsidebarNavImage} alt="asideImage" />
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div className='cursor-pointer'>
-                                <p className='text-uppercase custom-font-size mb-3'>we are awesome follow us</p>
-                                <ul className='d-flex justify-content-center gap-4'>
-                                    <li className='list-icon-none'><i className="fa-brands fa-twitter"></i></li>
-                                    <li className='list-icon-none'><i className="fa-brands fa-instagram"></i></li>
-                                    <li className='list-icon-none'><i className="fa-brands fa-facebook-f"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
             </div>
             <Cart />
         </nav>

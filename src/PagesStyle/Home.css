@@ -12,6 +12,15 @@
     height: 0px;
 
 }
+.custom-height-product{
+height:300px !important;
+width: 300px;
+}
+.custom-height-product img{
+    height: 100%;
+    object-fit:cover ;
+    width: 90%;
+}
 .custom-padding-icon-heart{
     padding: 7px !important;
 }
@@ -118,10 +127,19 @@
     .text-color-cetegory {
         color: white;
     }
+    .custom-height-product{
+        height:auto !important;
+        width: 90%;
+        }
 
 }
 
 @media (min-width: 525px) and (max-width: 768px) {
+    .custom-height-product{
+        height:auto !important;
+        width: 80%;
+       
+        }
     .categoryWrap {
         position: absolute;
         height: 0px;
