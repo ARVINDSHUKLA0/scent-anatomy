@@ -1,24 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom' 
 
 const Footer = () => {
+    
+ 
     return (
         <>
             <div className='bg-light'>
                 <div className='container py-4 '>
                     <div>
                         <ul className='d-flex align-items-center justify-content-center flex-wrap text-uppercase fs-12 fw-bolder cursor-pointer'>
-                            <li className='p-2 list-icon-none custom-font-size-and-weight'>all</li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'>Bhakti Plush</li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'>
-                                <Link className='text-decoration-none text-dark' to="/cancellations">Divine Oils</Link>
+                                <Link className='text-decoration-none text-dark'>Divine Oils</Link>
                             </li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'>
-                                <Link className='text-decoration-none text-dark' to="/privacyPolicy">Gifting Collection</Link>
+                                <Link className='text-decoration-none text-dark'>Gifting Collection</Link>
                             </li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'> Sacred Powders</li>
                             <li className='p-2 list-icon-none custom-font-size-and-weight'>
-                                <Link className='text-decoration-none text-dark' to="/termconditions">
+                                <Link className='text-decoration-none text-dark'>
                                 Sacred Scents
                                 </Link>
                             </li> 

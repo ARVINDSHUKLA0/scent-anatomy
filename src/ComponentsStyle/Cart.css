@@ -29,6 +29,7 @@
   position: relative;
   z-index: 1; 
   overflow: hidden;
+  padding-left: 10px !important;
 }  
 
 .custom-remove-set{
@@ -47,4 +48,12 @@
  
 .custom-height-set{ 
   height: 40%;
+}
+.cart-compoemts-imges{
+  width: 150px !important;
+}
+.cart-compoemts-imges img{
+  width: 100%;
+  object-fit: cover;  
+  border-radius: 10px;
 }

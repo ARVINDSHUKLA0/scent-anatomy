@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import '../PagesStyle/Faq.css'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer' 
-import FaqOne from '/assets/img/faqOne.jpg'
-import FaqTwo from '/assets/img/FaqTwo.jpg'
+import FaqOne from '/assets/img/Bhakti1.webp'
+import FaqTwo from '/assets/img/Bhakti3.webp'
 import FaqSevgOne from '/assets/img/FaqSevgOne.webp'
 import FaqSevgTwo from '/assets/img/faqSevgTwo.webp'
 import FaqSevgThree from '/assets/img/faqSevgThree.webp'
@@ -72,7 +72,7 @@ const Faq = () => {
                 <div className="row m-0 ">
                     <div className="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div className='img-set-faq'>
-                            <img className='img-fluid' src={FaqTwo} alt="" />
+                            <img className='img-fluid ' src={FaqTwo} alt="" />
                         </div>
                     </div>
                     <div className="col-lg-8 col-md-12 col-sm-12 col-12 pt-lg-5 bg-light px-2 rounded-4 mb-lg-4">

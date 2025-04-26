@@ -61,9 +61,7 @@ const Home = () => {
 
               >
                 <ul className="d-lg-flex py-4 d-block gap-3 p-0">
-                  <li value=''   onClick={() => setFilter('')} className="text-uppercase d-lg-block cursor-pointer d-none main-font-weight list-icon-none fs-mediam-font-size">
-                    all
-                  </li>
+                 
                   <li  onClick={() => setFilter('Bhakti')} className="text-uppercase d-lg-block d-none cursor-pointer  list-icon-none fs-mediam-font-size">
                     Bhakti Plush
                   </li>
@@ -116,9 +114,9 @@ const Home = () => {
             <div className="row">
               {
                 productsToShow.map((itemValue, index) => (
-                  <div className='col-lg-3 col-md-4 col-sm-6 col-6 product-item text-center cursor-pointer ' key={index}>
+                  <div className='col-lg-3 col-md-4 col-sm-6 col-6  text-center cursor-pointer  ' key={index}>
 
-                    <div className="position-relative overflow-hidden ">
+                    <div className="position-relative custom-overfolw-hidden product-item ">
                       <Link to={`/productbuy/${itemValue.id}`} className='text-decoration-none '>
                       <div className='custom-height-product'>
                         <img className='img-fluid' src={itemValue.thumbnailImage} width={260} alt="Image" />

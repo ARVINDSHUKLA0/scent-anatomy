@@ -40,7 +40,13 @@
     background-color: rgba(250, 235, 215, 0.661);
     border-radius: 19px;
     height: 96%;
+    width: 100%;
     overflow: hidden;
+  }
+  .img-set-faq img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   .cutom-flexibe-payment{
     padding: 30px;

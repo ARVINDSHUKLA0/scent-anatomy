@@ -1,15 +1,4 @@
-.product-single-item-container{
-    height: 450px;
-}
-.product-buy-banner{
-   background-image: url('/assets/img/ProductbuyBanner.jpg');
-   width: 100%;
-   height: 100%;
-   background-repeat: no-repeat;
-   background-position: top, center;
-   background-size: cover;
-
-}
+ 
 .imgesProductSlick{
     height: 130px; 
     width: 130px;
@@ -18,7 +7,7 @@
     width: 100%;
 }
 .product-buy-imges-center{
-    height: auto;   
+    height: 500px;   
     width: 100%; 
     display: inline-block; 
     align-items: center;
@@ -27,6 +16,7 @@
 .product-buy-imges-center img{
     height: 100%; 
     width: 100%;
+    object-fit: cover;
 }
  
 .custom-product-slick-slider{

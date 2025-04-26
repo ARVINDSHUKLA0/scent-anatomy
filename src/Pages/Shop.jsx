@@ -253,12 +253,14 @@ const Shop = () => {
                                     >
                                         <div className="position-relative overflow-hidden px-2">
                                             <Link to={`/productbuy/${itemValue.id}`} className="text-decoration-none">
+                                            <div className='custom-height-product'>
                                                 <img
                                                     className="img-fluid"
                                                     src={itemValue.thumbnailImage}
                                                     width={235}
                                                     alt="Image"
                                                 />
+                                                </div>
                                             </Link>
                                             <div className="position-absolute product-wrapper d-flex align-items-center justify-content-center ">
                                                 <span className="d-flex align-items-center h-100 ">

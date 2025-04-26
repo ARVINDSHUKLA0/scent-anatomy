@@ -5,16 +5,26 @@
     padding: 7px 30px !important;
     border-radius: 30px;
 }
-.custom-width{
-    width: 130px;
+.checkOut-imges{
+    width: 150px !important;
+}
+.checkOut-imges img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 @media (min-width: 0px) and (max-width: 525px) {
-
+    .checkOut-imges{
+        width: 120px !important;
+    }
 
 }
 
 @media (min-width: 526px) and (max-width: 768px) {
+    .checkOut-imges{
+        width: 130px !important;
+    }
 
 }
 @media (min-width: 769) and (max-width: 1024px) {

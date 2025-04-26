@@ -64,8 +64,8 @@ const Cart = () => {
                                 cartItems.map((asideCartValue, index) => (
 
                                     <div className='d-flex justify-content-between mb-4 mt-2' key={index}>
-                                        <div>
-                                            <img className='img-fluid' src={asideCartValue.thumbnailImage} width={130} alt="" />
+                                        <div className='cart-compoemts-imges'>
+                                            <img className='img-fluid' src={asideCartValue.thumbnailImage}  alt="" />
                                         </div>
                                         <div className='ps-4'>
                                             <p className='pe-3 fw-light'>{asideCartValue.title}</p>

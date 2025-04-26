@@ -1,8 +1,8 @@
 import React from 'react'
 import '../PagesStyle/About.css'
 import Navbar from '../Components/Navbar' 
-import AboutOneimg from '/assets/img/five.webp'
-import AboutTwoimg from '/assets/img/seven.jpg'
+import AboutOneimg from '/assets/img/Gifting2.png'
+import AboutTwoimg from '/assets/img/Gifting4.png'
 import AboutProfileOne from '/assets/img/AboutProfileOne.webp'
 import Footer from '../Components/Footer'
 
@@ -21,13 +21,13 @@ const About = () => {
                       <h2>Our Story</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque molestias sunt possimus nam dicta facere accusamus similique nostrum dignissimos voluptatum, ad blanditiis voluptate obcaecati dolores, velit quidem voluptatibus magni non alias saepe distinctio nesciunt quaerat. Quidem nihil facilis similique, at harum cumque eum ad placeat porro, eligendi sit natus et omnis qui nesciunt? Praesentium ipsa impedit esse laborum eaque nesciunt deserunt iure, nemo id sit rem debitis sunt vel fuga sapiente, autem voluptatem nam maxime odit vero neque aliquam? Natus, accusantium! Incidunt dignissimos perferendis voluptate, soluta voluptates nihil officia eos porro? Incidunt tenetur est eveniet excepturi sunt, minima optio saepe?</p>
                  </div>
-                 <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-                   <img className='img-fluid' src={AboutOneimg} alt="" />
+                 <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+                   <img className='img-fluid  rounded-5' src={AboutOneimg} alt="" />
                </div>
                  <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-                   <img className='img-fluid' src={AboutTwoimg} alt="" />
+                   <img className='img-fluid rounded-5' src={AboutTwoimg} alt="" />
                </div>
-               <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+               <div className="col-lg-6 col-md-6 col-sm-12 col-12 ps-lg-3">
                       <h2>Our Story</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque molestias sunt possimus nam dicta facere accusamus similique nostrum dignissimos voluptatum, ad blanditiis voluptate obcaecati dolores, velit quidem voluptatibus magni non alias saepe distinctio nesciunt quaerat. Quidem nihil facilis similique, at harum cumque eum ad placeat porro, eligendi sit natus et omnis qui nesciunt? Praesentium ipsa impedit esse laborum eaque nesciunt deserunt iure, nemo id sit rem debitis sunt vel fuga sapiente, autem voluptatem nam maxime odit vero neque aliquam? Natus, accusantium! Incidunt dignissimos perferendis voluptate, soluta voluptates nihil officia eos porro? Incidunt tenetur est eveniet excepturi sunt, minima optio saepe?</p>
                  </div>

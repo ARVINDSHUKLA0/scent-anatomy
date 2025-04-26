@@ -30,10 +30,10 @@ const Login = () => {
             <div className='text-center'>
               <div>
                 <Link to="/">
-                <img src={Logo} alt="" width={200} />
+                <img src={Logo}  alt="" width={60} />
                 </Link>
               </div>
-              <h5>Sign up</h5>
+              <p className='mt-4 text-capitalize fs-5'>login</p>
             </div>
             <div>
               <form onSubmit={LoginSubmitFunc} className='py-4' action="">

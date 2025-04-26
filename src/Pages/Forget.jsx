@@ -14,7 +14,7 @@ const Forget = () => {
             <div className='text-center'>
               <div>
                 <Link to="/">
-                <img src={Logo} alt="" width={200} />
+                <img src={Logo} alt="" width={60} />
                 </Link>
               </div>
               <h5 className='text-capitalize '>forget your password</h5>

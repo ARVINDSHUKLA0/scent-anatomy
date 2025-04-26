@@ -88,7 +88,7 @@ const Navbar = () => {
                             </li>
 
                             <li className='list-icon-none'>
-                                <Link className='custom-font-size text-uppercase cutom-color py-4 custom-font-weight text-decoration-none custom-padding-shop ' to="/">about</Link>
+                                <Link className='custom-font-size text-uppercase cutom-color py-4 custom-font-weight text-decoration-none custom-padding-shop ' to="/about">about</Link>
                             </li>
 
                             <li onClick={() => toggleDropdownMenu("shop")} className='list-item pt-1 cursor-pointer list-icon-none item-sm-py  custom-font-size text-uppercase custom-font-weight '>

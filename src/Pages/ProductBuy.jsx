@@ -66,9 +66,7 @@ const ProductBuy = () => {
     return (
         <>
             <Navbar />
-            <section className='product-single-item-container'>
-                <div className='product-buy-banner'></div>
-            </section>
+           
             <section className='container mb-4'>
                 {DataProductBuy ? (
                     <div className="row m-0">
