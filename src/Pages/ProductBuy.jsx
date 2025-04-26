@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../PagesStyle/ProductBuy.css'
 import { Link, useParams } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
+import { AddtoCartWarpper } from '../Context/AddToCartContext'
 import Product from '../Api/Product'
 import ProductSlide from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -9,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from '../Components/Footer'
 
 const ProductBuy = () => {
+    const {addToCartFunc}= useContext(AddtoCartWarpper)
     const [key, setKey] = useState(false);
     const [Description, SetDescription] = useState(false);
     const [Specifications, SetSpecifications] = useState(false);
@@ -16,10 +18,6 @@ const ProductBuy = () => {
     const { id } = useParams();
 
     const DataProductBuy = Product.find(item => item.id === Number(id));
-
-
-    console.log("hit", DataProductBuy);
-
 
     const settings = {
         autoplay: true,
@@ -101,8 +99,12 @@ const ProductBuy = () => {
                                     <button className='btn-product-plus'>+</button>
                                 </div>
                                 <div>
-                                    <button className='btn-addTo-cart text-capitalize'>add to cart</button>
-                                    <button className='btn-buy-kow text-capitalize'>buy it kow</button>
+                                    <button onClick={()=>addToCartFunc(DataProductBuy.id)}  className='btn-addTo-cart text-capitalize'>add to cart</button>
+                                    <button className='btn-buy-kow text-capitalize'>
+                                        <Link className='text-decoration-none text-white' to="/checkout">
+                                        buy it kow
+                                        </Link>
+                                    </button>
                                 </div>
                             </div>
 
