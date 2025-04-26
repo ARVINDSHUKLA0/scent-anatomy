@@ -133,8 +133,8 @@ const Home = () => {
                       </div>
                     </div>
 
-                    <div className="text-center">
-                      <p className="mb-2 text-uppercase text-dark mt-3 custom-font-size-and-weight fw-bold">{itemValue.title}</p>
+                    <div className="text-center ">
+                      <p className="mb-2 text-uppercase text-dark mt-3 custom-font-size-and-weight px-2 fw-bold">{itemValue.title}</p>
                       <div className="product-btn-price w-100 position-relative overflow-x-hidden ">
                         <div className="position-absolute top-0 w-100 text-center product-add-cart"><button onClick={() => addToCartFunc(itemValue.id)}
                           className=" border-0 text-uppercase btn-content bg-white custom-font-size-and-weight">add to cart</button></div>
