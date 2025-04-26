@@ -56,11 +56,10 @@ width: 300px;
 }
 
 .product-wrapper {
-    bottom: -0px;
     position: absolute;
+    bottom: -100%;
     height: 26px;
-    width: 100%;
-    transition: .3s;
+    width: 100%; 
 }
 
 .custom-overfolw-hidden{
@@ -75,7 +74,7 @@ width: 300px;
 }
 
 .product-item:hover .product-wrapper {
-    bottom: -1px;
+    bottom: 0px;
 }
 
 .custom-bg {
