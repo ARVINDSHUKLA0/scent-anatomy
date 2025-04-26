@@ -14,7 +14,7 @@ const Home = () => {
   const { WislistFunc } = useContext(WisListdata)
   const [categoryProduct, setCategoryProduct] = useState(false);
   const [filterPrice, setFilterPrice] = useState(false);
-  const [filter, setFilter] = useState('')
+  const [filter, setFilter] = useState('Bhakti')
   const [datafilter, setDatafilter] = useState([])
 
 
